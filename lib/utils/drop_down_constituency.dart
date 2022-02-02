@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DropDownwidget extends StatefulWidget {
-  const DropDownwidget({Key? key}) : super(key: key);
+class DropDownwidgetConstituency extends StatefulWidget {
+  const DropDownwidgetConstituency({Key? key}) : super(key: key);
 
   @override
-  State<DropDownwidget> createState() => _DropDownwidgetState();
+  State<DropDownwidgetConstituency> createState() => _DropDownwidgetState();
 }
 
-class _DropDownwidgetState extends State<DropDownwidget> {
+class _DropDownwidgetState extends State<DropDownwidgetConstituency> {
   String dropdownValue = 'Aligarh';
 
   @override
@@ -17,7 +17,10 @@ class _DropDownwidgetState extends State<DropDownwidget> {
       icon: const Icon(Icons.arrow_downward),
       elevation: 24,
       style: const TextStyle(
-          color: Colors.indigo, fontSize: 22, fontWeight: FontWeight.bold),
+          fontFamily: "Kalam",
+          color: Colors.indigo,
+          fontSize: 18,
+          fontWeight: FontWeight.bold),
       underline: Container(
         height: 2,
         color: Colors.deepPurpleAccent,
