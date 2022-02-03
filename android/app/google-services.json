@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "683642339193",
+    "firebase_url": "https://chatapp-friendly-default-rtdb.firebaseio.com",
+    "project_id": "chatapp-friendly",
+    "storage_bucket": "chatapp-friendly.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683642339193:android:9146cbda39daca0f83f9a8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683642339193-ero8aljkfh3don9eiak9ed545odsankf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI6Lb7xEe2feIq2YYjm2xNcfjP3QAUQdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683642339193-ero8aljkfh3don9eiak9ed545odsankf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Screens/user_data.dart';
+import 'package:flutter_application_1/data/user_dao.dart';
+import 'package:flutter_application_1/data/user_data.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
+int partyval = 0;
+String party = 'BJP';
+
 class SelectParty extends StatelessWidget {
-  const SelectParty({Key? key}) : super(key: key);
+  final userDao = UserDao();
+
+  SelectParty({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +36,6 @@ class Mystateful extends StatefulWidget {
 }
 
 class _MystatefulState extends State<Mystateful> {
-  int partyval = 0;
   showAlert() async {
     Alert(
             context: context,
@@ -234,6 +241,31 @@ class _MystatefulState extends State<Mystateful> {
         ElevatedButton(
             onPressed: () {
               if (partyval != 0) {
+                if (partyval == 1) {
+                  party = "BJP";
+                }
+                if (partyval == 2) {
+                  party = "INC";
+                }
+                if (partyval == 3) {
+                  party = "BSP";
+                }
+                if (partyval == 4) {
+                  party = "SP";
+                }
+                if (partyval == 5) {
+                  party = "AP";
+                }
+                if (partyval == 6) {
+                  party = "AIMIM";
+                }
+                if (partyval == 7) {
+                  party = "others";
+                }
+                if (partyval == 8) {
+                  party = "nota";
+                }
+                _senddata();
                 Navigator.pushNamed(context, MyRoutes.resultroute);
               } else {
                 showAlert();
@@ -250,4 +282,11 @@ class _MystatefulState extends State<Mystateful> {
       ],
     );
   }
+}
+
+void _senddata() {
+  final data = UserPref(DateTime.now(), dropdownValueplace.toString(), sexvalue,
+      agevalue, religionval, partyval);
+
+  UserDao().saveMessage(data);
 }

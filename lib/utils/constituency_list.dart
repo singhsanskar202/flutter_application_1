@@ -1,7 +1,5 @@
-import 'package:flutter/src/material/dropdown.dart';
-
-class ListLocation {
-  static List<String> itmes = [
+class ConstituencyList {
+  static List<String> items = [
     "Sirpur",
     "Etmadpur",
     "Agra Cantonment",
@@ -410,6 +408,4 @@ class ListLocation {
     "Varanasi Cantonment",
     "Sevapuri"
   ];
-
-  map(DropdownMenuItem<String> Function(String value) param0) {}
 }
