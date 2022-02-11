@@ -1,14 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Screens/party.dart';
 import 'package:flutter_application_1/utils/constituency_list.dart';
-import 'package:flutter_application_1/utils/drop_down_constituency.dart';
-import 'package:flutter_application_1/utils/drop_down_religion.dart';
 import 'package:flutter_application_1/utils/religion_list.dart';
 import 'package:flutter_application_1/utils/routes.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:flutter_application_1/data/user_data.dart';
-import 'package:flutter_application_1/data/user_dao.dart';
 
 int agevalue = 0;
 int sexvalue = 0;
@@ -32,6 +28,11 @@ class _UserPageState extends State<UserPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () => FirebaseAuth.instance.signOut(),
+              icon: Icon(Icons.logout))
+        ],
         title: const Text("Provide Details"),
       ),
       body: SingleChildScrollView(
@@ -39,7 +40,7 @@ class _UserPageState extends State<UserPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              "images/hi.png",
+              "assets/images/hi.png",
               fit: BoxFit.cover,
               // width: double.infinity,
               height: 300,
@@ -268,7 +269,7 @@ class _UserPageState extends State<UserPage> {
                     } else if (agevalue == 3) {
                       age = '50+';
                     }
-                    Navigator.pushNamed(context, MyRoutes.partyroute);
+                    Navigator.pushNamed(context, MyRoutes.resultroute);
                   } else if (agevalue == 0 && sexvalue == 0) {
                     Alert(
                             context: context,

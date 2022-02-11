@@ -24,10 +24,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -58,5 +55,16 @@ class DefaultFirebaseOptions {
     projectId: 'chatapp-friendly',
     databaseURL: 'https://chatapp-friendly-default-rtdb.firebaseio.com',
     storageBucket: 'chatapp-friendly.appspot.com',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAuRDuGNzy4DrCVTzzUdpjitbI1fbJ7Wbc',
+    appId: '1:683642339193:ios:488742e550aaf0a783f9a8',
+    messagingSenderId: '683642339193',
+    projectId: 'chatapp-friendly',
+    databaseURL: 'https://chatapp-friendly-default-rtdb.firebaseio.com',
+    storageBucket: 'chatapp-friendly.appspot.com',
+    iosClientId: '683642339193-lat09eec0ggo2q6bdtj327l8rhu1fuj6.apps.googleusercontent.com',
+    iosBundleId: 'com.example.voterapp',
   );
 }

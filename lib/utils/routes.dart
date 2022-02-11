@@ -4,4 +4,5 @@ class MyRoutes {
   static String userdataroute = "/userdata";
   static String partyroute = "/party";
   static String resultroute = "/result";
+  static String graphroute = "/graph";
 }
